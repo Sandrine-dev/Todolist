@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--Defer sert à executer le javascript à la fin-->
+
+
+    <title>Ma TodoList</title>
+</head>
+<body>
+    <div class="corpse">
+        <div class="wrap">
+            <div class="block style-1"></div>
+            <div class="block style-2"></div>
+            <div class="block style-3"></div>
+            <div class="block style-4"></div>
+            <div class="block style-5"></div>
+            <div class="block style-6"></div>
+            <div class="block style-7"></div>
+
+        </div>
+        <header>
+            <h1>Ma TodoList !</h1>
+        </header>
+        
+        <section id="form">
+            <input type="text" placeholder="Ajoutez une tâche..." id="task" required>
+            <button id="btn"><i class="uil uil-plus"></i></button>
+        </section>
+
+        <section id="noTask">
+            <h2>La TodoList est vide</h2>
+        </section>
+
+        <section id="listTask">
+            <ul id="todo"></ul>
+        </section>
+
+        <div class="wrap">
+            <div class="block style-7"></div>
+            <div class="block style-4"></div>
+            <div class="block style-5"></div>
+            <div class="block style-6"></div>
+            <div class="block style-1"></div>
+            <div class="block style-2"></div>
+            <div class="block style-3"></div>
+
+        </div>
+    </div>
+
+    <script src="javascript/main.js"></script>
+
+    <noscript>Votre navigateur n'accepte pas le Javascript. La TodoList ne sera donc pas fonctionnelle!</noscript>
+    
+</body>
+</html>

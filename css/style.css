@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
+
+:root{
+    --bg-color : #FBE0C3;
+    --font : #344648;
+    --hover : #FFBB98;
+    --ligne : #7D8E95;
+
+    /*.25rem= 4px, .5rem = 8px, 1rem = 16px, 1.5 rem = 24px ...*/
+    --bg-size: 80rem;
+    --mg-list: .75rem;
+    --i-size: 1.75rem;
+}
+
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Fuzzy Bubbles', cursive;
+    background-color: var(--bg-color);
+}
+
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+.corpse{
+    background-color: #f7f7f7;
+    width: 875px;
+    max-width: var(--bg-size);
+    margin: 25px auto;
+    height: auto;
+}
+
+header, section {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#noTask{
+    text-align: center;
+}
+
+/*list*/
+li {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    border-bottom: 2px dotted var(--ligne);
+    width: 400px;
+    margin-bottom: var(--mg-list);
+    position: relative;
+}
+
+ul{
+    width: 150px;
+    list-style-type: none;
+    padding: 0;
+    margin: 15px auto;
+    text-align: center;
+    width: 400px;
+}
+
+#listTask{
+  margin: 10px auto;
+}
+
+li i.uil {
+    font-size: var(--i-size);
+}
+
+li i.uil:hover {
+    color: var(--hover);
+}
+
+/*deco around*/
+.wrap{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.block {
+    width: 125px;
+    height: 125px;
+}
+
+.style-1 {
+  background: #344648;
+}
+.style-2 {
+  width: 0;
+  height: 0;
+  border: 62px solid #f7f7f7;
+  border-top-color: #7D8E95;
+  border-bottom-color: #7D8E95;
+  background: #7D8E95;
+  padding-top: 1px;
+}
+.style-3 {
+  background-image: linear-gradient(135deg, #FFBB98 50%, #7D8E95 50%);
+}
+.style-4 {
+  background-image: linear-gradient(#f7f7f7, #f7f7f7 7px, #344648 7px, #344648);
+  background-size: 100% 14px;
+}
+.style-5 {
+  background-image: linear-gradient(45deg, #FFBB98 50%, #f7f7f7 50%);
+}
+.style-6 {
+  background-image: linear-gradient(135deg, #344648 50%, transparent 50%), linear-gradient(#f7f7f7, #f7f7f7 7px, #344648 7px, #344648);
+  background-size: 100%, 100% 14px;
+}
+.style-7 {
+ background-image: linear-gradient(to right, #FFBB98, #FFBB98 4px, #f7f7f7 4px, #f7f7f7);
+  background-size: 8px 100%;
+}
+
+
+/*checkbox*/
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.check {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    height: 25px;
+    width: 25px;
+    background-color: var(--font);
+}
+
+.main input:checked ~ .check{
+    background-color: var(--ligne);
+}
+
+.check:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.main input:checked ~ .check:after {
+    display: block;
+}
+
+.main .check:after {
+    left: 8px;
+    bottom: 7px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
